@@ -51,7 +51,7 @@ class Solution:
         def helper(left, right):
             if left == right:
                 return nums[left]
-            mid = (left + right) / 2
+            mid = (left + right) // 2
             # 这里有点像二叉树的后序遍历
             left_sum = helper(left, mid)
             right_sum = helper(mid + 1, right)
