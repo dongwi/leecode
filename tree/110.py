@@ -1,11 +1,9 @@
-class TreeNode:
-    def __init__(self, val=0, left=None, right=None):
-        self.val = val
-        self.left = left
-        self.right = right
+from tree import TreeNode
+
 
 class NotBalanceException(Exception):
     pass
+
 
 # 这个与计算二叉树的深度的题目相似
 class Solution:
@@ -23,6 +21,7 @@ class Solution:
             else:
                 # 非平衡，则抛出异常
                 raise NotBalanceException()
+
         try:
             helper(root)
             return True
